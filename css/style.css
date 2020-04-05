@@ -12769,7 +12769,7 @@ h5,
   right: 0;
   bottom: 0;
   content: '';
-  background: #3e64ff;
+  background: rgba(62, 100, 255, 0.45);
   opacity: .7;
 }
 
@@ -12982,7 +12982,7 @@ textarea.form-control {
 }
 
 .ftco-section {
-  padding: 7em 0;
+  padding: 2em 0;
   position: relative;
 }
 
@@ -13007,7 +13007,7 @@ textarea.form-control {
 .ftco-footer {
   font-size: 16px;
   background: #000000;
-  padding: 7em 0;
+  padding: 4em 0 1em;
   z-index: 0;
 }
 

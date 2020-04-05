@@ -25,14 +25,14 @@ AOS.init({
 			$('.js-fullheight').css('height', $(window).height());
 		});
 
-		if (window.matchMedia('(max-width: 767px)').matches) {
-			$('.js-fullheight').css('height', spHeight);
-			$('.overlay').css('height', spHeight);
-			$(window).resize(function () {
-				$('.js-fullheight').css('height', spHeight);
-				$('.overlay').css('height', spHeight);
-			});
-		}
+		// if (window.matchMedia('(max-width: 767px)').matches) {
+		// 	$('.js-fullheight').css('height', spHeight);
+		// 	$('.overlay').css('height', spHeight);
+		// 	$(window).resize(function () {
+		// 		$('.js-fullheight').css('height', spHeight);
+		// 		$('.overlay').css('height', spHeight);
+		// 	});
+		// }
 	};
 	fullHeight();
 
@@ -258,16 +258,17 @@ AOS.init({
 		mainClass: 'mfp-fade',
 		removalDelay: 160,
 		preloader: false,
-
 		fixedContentPos: false
 	});
 
 	var goClick = function () {
 		$('section').hide();
+		$('footer').hide();
 		$('.hero-wrap').show();
 		$('.mouse-icon').on('click', function() {
 			$('.hero-wrap.banner').removeClass('banner-fixed');
 			$('section').show();
+			$('footer').show();
 		});
 	}
 	goClick();

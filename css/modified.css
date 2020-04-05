@@ -43,8 +43,10 @@
   z-index: 99999;
 }
 
-._fixed {
-  position: fixed;
+@media screen and (min-width: 768px) {
+  ._fixed {
+    position: fixed;
+  }
 }
 
 .down-arrow-btn {
