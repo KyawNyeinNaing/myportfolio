@@ -1,3 +1,3 @@
 ### Live Demo
 
-- https://KyawNyeinNaing/myportfolio
+- https://KyawNyeinNaing.github.io/myportfolio
