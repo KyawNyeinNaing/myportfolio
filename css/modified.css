@@ -6,7 +6,14 @@
 }
 
 .hero-wrap.banner .profile-wrapper h2 {
-  color: #ffffff; 
+  color: #ffffff;
+  font-size: 1.5em;
+}
+
+@media screen and (min-width: 768px) {
+  .hero-wrap.banner .profile-wrapper h2 {
+    font-size: 2em;
+  }
 }
 
 .hero-wrap.banner .profile-wrapper .profile {
@@ -16,6 +23,13 @@
 
 .hero-wrap.banner .profile-wrapper .profile h1 {
   color: #ffffff;
+  font-size: 30px;
+}
+
+@media screen and (min-width: 768px) {
+  .hero-wrap.banner .profile-wrapper .profile h1 {
+    font-size: 60px;
+  }
 }
 
 .hero-wrap.banner .profile-wrapper .profile .profile-img {
