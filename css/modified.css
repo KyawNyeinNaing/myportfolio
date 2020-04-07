@@ -104,3 +104,18 @@
 .about-info li a span {
   color: #999999;
 }
+
+.ftco-footer-contact {
+  padding: 0;
+}
+
+.ftco-footer-contact li,
+.ftco-footer-contact li a {
+  display: flex;
+  align-items: center;
+}
+
+.ftco-footer-contact li i {
+  margin-right: 7px;
+  font-size: 18px;
+}
