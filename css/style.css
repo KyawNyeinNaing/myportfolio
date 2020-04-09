@@ -12769,8 +12769,7 @@ h5,
   right: 0;
   bottom: 0;
   content: '';
-  background: rgba(62, 100, 255, 0.45);
-  opacity: .7;
+  background: rgba(0, 102, 255, 0.29)
 }
 
 .ftco-hireme h2 {
@@ -12843,7 +12842,7 @@ h5,
   bottom: 0;
   content: '';
   opacity: 0;
-  background: #3e64ff;
+  background: rgba(220, 220, 220, 0.38);
   z-index: -1;
   -moz-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
@@ -12871,6 +12870,7 @@ h5,
 
 .project .text h3 {
   font-size: 20px;
+  font-weight: 600;
 }
 
 .project .text h3 a {
@@ -12878,7 +12878,7 @@ h5,
 }
 
 .project .text span {
-  color: rgba(255, 255, 255, 0.8);
+  color: rgb(105, 104, 104);
   text-transform: uppercase;
   letter-spacing: 2px;
   font-size: 12px;
