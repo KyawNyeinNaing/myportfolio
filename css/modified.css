@@ -32,11 +32,6 @@
   }
 }
 
-.hero-wrap.banner .profile-wrapper .profile .profile-img {
-  width: 50px;
-  height: auto;
-}
-
 .underline {
   position: relative;
 }
@@ -118,4 +113,23 @@
 .ftco-footer-contact li i {
   margin-right: 7px;
   font-size: 18px;
+}
+
+.ftco-section ._tab-sp {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .ftco-section ._tab-sp {
+    display: block;
+  }
+}
+
+.hero-wrap .profile-wrapper .profile ._img {
+  width: 100px;
+  height: 100px;
+  border: 2px solid #ffffff;
+  border-radius: 65px;
+  overflow: hidden;
+  margin: 0 auto;
 }

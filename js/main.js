@@ -19,10 +19,10 @@ AOS.init({
 
 	var fullHeight = function () {
 		let wHeight = $(window).height();
-		let spHeight = wHeight - 350;
-		$('.js-fullheight').css('height', $(window).height());
+		// let spHeight = wHeight - 350;
+		$('.js-fullheight').css('height', wHeight);
 		$(window).resize(function () {
-			$('.js-fullheight').css('height', $(window).height());
+			$('.js-fullheight').css('height', wHeight);
 		});
 
 		// if (window.matchMedia('(max-width: 767px)').matches) {
