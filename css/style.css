@@ -13056,6 +13056,14 @@ textarea.form-control {
   color: #fff;
 }
 
+.ftco-footer .btn.btn-secondary {
+  color: #000000 !important;
+}
+
+.ftco-footer .btn.btn-secondary:hover {
+  color: #a0f669 !important;
+}
+
 .ftco-footer .ftco-heading-2 {
   font-size: 17px;
   font-weight: 400;

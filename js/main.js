@@ -265,7 +265,7 @@ AOS.init({
 		$('section').hide();
 		$('footer').hide();
 		$('.hero-wrap').show();
-		$('.mouse-icon').on('click', function() {
+		$('.mouse-icon').on('click', function () {
 			$('.hero-wrap.banner').removeClass('banner-fixed');
 			$('section').show();
 			$('footer').show();
@@ -275,11 +275,11 @@ AOS.init({
 
 	var goToTop = function () {
 		$('.go-to-top').hide();
-		$(window).scroll(function() {
+		$(window).scroll(function () {
 			($(this).scrollTop() >= 50) ? $('.go-to-top').fadeIn(200) : $('.go-to-top').fadeOut(200)
 		});
 
-		$('.go-to-top').on('click', function() {
+		$('.go-to-top').on('click', function () {
 			$('html, body').animate({
 				scrollTop: 0
 			}, 500);
@@ -294,7 +294,12 @@ AOS.init({
 				scrollTop: $('.goto-here').offset().top
 			}, 500, 'easeInOutExpo');
 
-			return false;
+			if (window.matchMedia('(max-width: 767px)').matches) {
+				let scrollTop = $('.goto-here').offset().top - 100
+				$('html,body').animate({
+					scrollTop: scrollTop
+				}, 500, 'easeInOutExpo');
+			}
 		});
 	};
 	goHere();
@@ -355,8 +360,6 @@ AOS.init({
 		css.innerHTML = ".txt-rotate > .wrap { border-right: 0.08em solid #fff }";
 		document.body.appendChild(css);
 	};
-
-
 })(jQuery);
 
 // this makes the height of each page equal to the height of the window
@@ -448,5 +451,5 @@ $(function () {
 		$('body').addClass('_edge');
 		$('._edge .hero-wrap').css("background-attachment", "initial")
 	}
-})
+});
 
