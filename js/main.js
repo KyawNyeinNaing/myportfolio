@@ -273,6 +273,19 @@ AOS.init({
 	}
 	goClick();
 
+	var goToTop = function () {
+		$(window).scroll(function() {
+			($(this).scrollTop() >= 50) ? $('.go-to-top').fadeIn(200) : $('.go-to-top').fadeOut(200)
+		});
+
+		$('.go-to-top').on('click', function() {
+			$('html, body').animate({
+				scrollTop: 0
+			}, 500);
+		});
+	}
+	goToTop();
+
 	var goHere = function () {
 		$('.mouse-icon').on('click', function (event) {
 			event.preventDefault();
@@ -327,8 +340,8 @@ AOS.init({
 	};
 
 	window.onload = function () {
-		var elements = document.getElementsByClassName('txt-rotate');
-		for (var i = 0; i < elements.length; i++) {
+		var elements = document.querySelectorAll('.txt-rotate');
+		for (let i = 0; i < elements.length; i++) {
 			var toRotate = elements[i].getAttribute('data-rotate');
 			var period = elements[i].getAttribute('data-period');
 			if (toRotate) {
@@ -344,12 +357,6 @@ AOS.init({
 
 
 })(jQuery);
-
-
-
-
-
-
 
 // this makes the height of each page equal to the height of the window
 // $('.page').css('height', $( window ).height());
@@ -373,14 +380,12 @@ AOS.init({
 		hash($(this).attr('href'));
 	});
 
-
-
 	//select all the anchors in the navbar one after another
 	$navbara.each(function () {
 		// and adds them in the sections variable
 		sections.push($($(this).attr('href')));
+	});
 
-	})
 	$(window).scroll(function (e) {
 		// scrollTop retains the value of the scroll top with the reference at the middle of the page
 		var scrollTop = $(this).scrollTop() + ($(window).height() / 2);
@@ -426,9 +431,7 @@ $(function () {
 	})
 
 	function percentageToDegrees(percentage) {
-
 		return percentage / 100 * 360
-
 	}
 });
 
