@@ -274,6 +274,7 @@ AOS.init({
 	goClick();
 
 	var goToTop = function () {
+		$('.go-to-top').hide();
 		$(window).scroll(function() {
 			($(this).scrollTop() >= 50) ? $('.go-to-top').fadeIn(200) : $('.go-to-top').fadeOut(200)
 		});
