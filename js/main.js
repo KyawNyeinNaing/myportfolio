@@ -4,9 +4,7 @@ AOS.init({
 });
 
 (function ($) {
-
 	"use strict";
-
 	$(window).stellar({
 		responsive: true,
 		parallaxBackgrounds: true,
@@ -15,7 +13,6 @@ AOS.init({
 		hideDistantElements: false,
 		scrollProperty: 'scroll'
 	});
-
 
 	var fullHeight = function () {
 		let wHeight = $(window).height();
@@ -51,7 +48,7 @@ AOS.init({
 
 	// Burger Menu
 	var burgerMenu = function () {
-		$('body').on('click', '.js-fh5co-nav-toggle', function (event) {
+		$('body').on('click', '.nav-btn', function (event) {
 			event.preventDefault();
 			if ($('#ftco-nav').is(':visible')) {
 				$(this).removeClass('active');
@@ -171,10 +168,7 @@ AOS.init({
 	};
 	scrollWindow();
 
-
-
 	var counter = function () {
-
 		$('#section-counter, .hero-wrap, .ftco-counter, .ftco-about').waypoint(function (direction) {
 			if (direction === 'down' && !$(this.element).hasClass('ftco-animated')) {
 
@@ -198,9 +192,7 @@ AOS.init({
 	var contentWayPoint = function () {
 		var i = 0;
 		$('.ftco-animate').waypoint(function (direction) {
-
 			if (direction === 'down' && !$(this.element).hasClass('ftco-animated')) {
-
 				i++;
 
 				$(this.element).addClass('item-animate');
@@ -362,22 +354,14 @@ AOS.init({
 	};
 })(jQuery);
 
-// this makes the height of each page equal to the height of the window
-// $('.page').css('height', $( window ).height());
-
 // scrollspy section
 (function ($) {
-	//variable that will hold the href attr of the links in the menu
 	var sections = [];
-	//variable that stores the id of the section
 	var id = false;
-	//variable for the selection of the anchors in the navbar
 	var $navbara = $('#navi a');
 
 	$navbara.click(function (e) {
-		//prevent the page from refreshing
 		e.preventDefault();
-		//set the top offset animation and speed
 		$('html, body').animate({
 			scrollTop: $($(this).attr('href')).offset().top - 180
 		}, 500);
@@ -386,17 +370,13 @@ AOS.init({
 
 	//select all the anchors in the navbar one after another
 	$navbara.each(function () {
-		// and adds them in the sections variable
 		sections.push($($(this).attr('href')));
 	});
 
 	$(window).scroll(function (e) {
-		// scrollTop retains the value of the scroll top with the reference at the middle of the page
 		var scrollTop = $(this).scrollTop() + ($(window).height() / 2);
-		//cycle through the values in sections array
 		for (var i in sections) {
 			var section = sections[i];
-			//if scrollTop variable is bigger than the top offset of a section in the sections array then 
 			if (scrollTop > section.offset().top) {
 				var scrolled_id = section.attr('id');
 			}
